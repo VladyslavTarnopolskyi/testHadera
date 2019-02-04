@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+.wrapper{
+  position: relative;
+  margin: 0 auto;
+  max-width: 720px;
+  min-width: 320px;
+}
+.bold-text{
+  font-weight: 700;
+}

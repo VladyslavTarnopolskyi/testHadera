@@ -1,0 +1,132 @@
+/******************CONTACT********************/
+.contact-form{
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  background-color: #ff0f03;
+
+  .wrap-form{
+    .success-msg{
+      padding: 326px 0 382px;
+      text-align: center;
+      font-size: 48px;
+      font-family: $mainFont;
+      color: #fff;
+    }
+  }
+  .header-form{
+    margin-top: 60px;
+    padding: 63px 6.25% 60px;
+    background: #f50e01 url("../img/callcenter.png") 6.25% 10px no-repeat;
+    color: #ffffff;
+    font-family: $mainFont;
+    font-size: 31px;
+    text-transform: uppercase;
+    .header-text-form{
+      text-align: right;
+    }
+    .bold-text{
+      font-size: 38px;
+    }
+  }
+  .text-in-form{
+    padding: 0 6.25%;
+    text-align: left;
+    color: #ffffff;
+    font-family: $mainFont;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .input-container{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 35px 6.25%;
+    label{
+      color: #ffffff;
+      font-family: $mainFont;
+      font-size: 29px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    input, select{
+      color: #4b4b4b;
+      width: 100%;
+      font-size: 29px;
+      padding: 17px;
+    }
+    &.checkbox{
+      font-size: 26px;
+      font-weight: 400;
+      flex-direction: row;
+      justify-content: right;
+    }
+  }
+  .btn-send{
+    line-height: 70px;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    color: #fff;
+    background-color: #033766;
+  }
+}
+
+// custom checkbox
+.container-check {
+  display: block;
+  position: relative;
+  padding-right: 50px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  height: 34px;
+  width: 34px;
+  background-color: #eee;
+}
+.container-check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container-check input:checked ~ .checkmark {
+  background-color: #ff0000;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-check input:checked ~ .checkmark:after {
+  display: block;
+}
+.container-check .checkmark:after {
+  left: 10px;
+  top: 0;
+  width: 12px;
+  height: 24px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(40deg);
+}

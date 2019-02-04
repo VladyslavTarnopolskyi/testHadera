@@ -1,0 +1,53 @@
+.testemonials{
+  @include wrap-padding;
+  .header-color{
+    color: $headerColor;
+  }
+  h3{
+    color: #4b4b4b;
+    font-family: $mainFont;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 67px 0 50px 0;
+  }
+  .testemonials-list{
+    li{
+      @include flex-row-end;
+      padding: 80px 45px;
+      border-bottom: 2px solid rgba(86,86,86, .3);
+      &:last-child{
+        border-bottom: none;
+      }
+      .photo-contact img{
+        width: 100%;
+      }
+    }
+    .main-desc-text{
+      text-align: right;
+    }
+    .quote{
+      font-family: "Abril Text";
+      font-size: 80px;
+      font-weight: 400;
+      text-transform: uppercase;
+      align-self: center;
+      padding: 0 20px;
+    }
+    .description-contact{
+      color: #053663;
+      font-family: $mainFont;
+      font-size: 26px;
+      font-weight: 400;
+      text-transform: uppercase;
+      .add-info{
+        @include flex-row-end;
+      }
+      .name-contact{
+        font-weight: 700;
+      }
+
+    }
+  }
+}

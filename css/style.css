@@ -1,0 +1,560 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'Narkis';
+  src: url("../fonts/NarkisRegular/NarkisRegular.eot");
+  src: url("../fonts/NarkisRegular/NarkisRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/NarkisRegular/NarkisRegular.woff") format("woff"), url("../fonts/NarkisRegular/NarkisRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Narkis';
+  src: url("../fonts/NarkisMedium/NarkisMedium.eot");
+  src: url("../fonts/NarkisMedium/NarkisMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/NarkisMedium/NarkisMedium.woff") format("woff"), url("../fonts/NarkisMedium/NarkisMedium.ttf") format("truetype"), url("../fonts/NarkisMedium/NarkisMedium.svg#NarkisTamMFW-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Narkis';
+  src: url("../fonts/NarkisBold/NarkisBold.eot");
+  src: url("../fonts/NarkisBold/NarkisBold.eot?#iefix") format("embedded-opentype"), url("../fonts/NarkisBold/NarkisBold.woff") format("woff"), url("../fonts/NarkisBold/NarkisBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.owl-carousel {
+  max-height: 474px;
+  position: relative;
+}
+.owl-carousel .owl-dots {
+  margin-top: 75px;
+}
+
+.owl-theme .owl-nav {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 474px;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+  width: 40%;
+  margin: 0;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+.owl-carousel .owl-nav button.owl-next img {
+  position: absolute;
+  top: 45%;
+  right: 10%;
+}
+.owl-carousel .owl-nav button.owl-next:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+.owl-carousel .owl-nav button.owl-prev img {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+}
+.owl-carousel .owl-nav button.owl-prev:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+
+#nav-dots {
+  text-align: center;
+}
+
+button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+.owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+
+.owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
+  background: #869791;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 720px;
+  min-width: 320px;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+/******************************HEADER********************************/
+.header {
+  position: relative;
+}
+.header .logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 720px;
+  padding: 0 6.25%;
+  height: 116px;
+  top: 0;
+  background-color: #f4f2f2;
+  z-index: 99;
+}
+.header .welcome-text {
+  margin: 111px auto 0;
+  padding: 4.86% 6.25%;
+  max-width: 550px;
+  color: #033766;
+  text-align: center;
+  font-family: Narkis;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 37.83px;
+  text-transform: uppercase;
+}
+
+.top-btn {
+  position: absolute;
+  top: 134px;
+  z-index: 9;
+}
+
+.carousel-section .slide-item {
+  position: relative;
+}
+.carousel-section .description-slide {
+  position: absolute;
+  height: 42px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: Narkis;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #000;
+}
+.carousel-section .slide-name {
+  padding: 30px 0;
+  text-align: center;
+  color: #053663;
+  font-family: Narkis;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/******************CONTACT********************/
+.contact-form {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  background-color: #ff0f03;
+}
+.contact-form .wrap-form .success-msg {
+  padding: 326px 0 382px;
+  text-align: center;
+  font-size: 48px;
+  font-family: Narkis;
+  color: #fff;
+}
+.contact-form .header-form {
+  margin-top: 60px;
+  padding: 63px 6.25% 60px;
+  background: #f50e01 url("../img/callcenter.png") 6.25% 10px no-repeat;
+  color: #ffffff;
+  font-family: Narkis;
+  font-size: 31px;
+  text-transform: uppercase;
+}
+.contact-form .header-form .header-text-form {
+  text-align: right;
+}
+.contact-form .header-form .bold-text {
+  font-size: 38px;
+}
+.contact-form .text-in-form {
+  padding: 0 6.25%;
+  text-align: left;
+  color: #ffffff;
+  font-family: Narkis;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.contact-form .input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding: 35px 6.25%;
+}
+.contact-form .input-container label {
+  color: #ffffff;
+  font-family: Narkis;
+  font-size: 29px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.contact-form .input-container input, .contact-form .input-container select {
+  color: #4b4b4b;
+  width: 100%;
+  font-size: 29px;
+  padding: 17px;
+}
+.contact-form .input-container.checkbox {
+  font-size: 26px;
+  font-weight: 400;
+  flex-direction: row;
+  justify-content: right;
+}
+.contact-form .btn-send {
+  line-height: 70px;
+  border-radius: 15px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  color: #fff;
+  background-color: #033766;
+}
+
+.container-check {
+  display: block;
+  position: relative;
+  padding-right: 50px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  height: 34px;
+  width: 34px;
+  background-color: #eee;
+}
+
+.container-check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container-check input:checked ~ .checkmark {
+  background-color: #ff0000;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-check .checkmark:after {
+  left: 10px;
+  top: 0;
+  width: 12px;
+  height: 24px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(40deg);
+}
+
+.testemonials {
+  padding: 0 6.25%;
+}
+.testemonials .header-color {
+  color: #ff0f03;
+}
+.testemonials h3 {
+  color: #4b4b4b;
+  font-family: Narkis;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 67px 0 50px 0;
+}
+.testemonials .testemonials-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 80px 45px;
+  border-bottom: 2px solid rgba(86, 86, 86, 0.3);
+}
+.testemonials .testemonials-list li:last-child {
+  border-bottom: none;
+}
+.testemonials .testemonials-list li .photo-contact img {
+  width: 100%;
+}
+.testemonials .testemonials-list .main-desc-text {
+  text-align: right;
+}
+.testemonials .testemonials-list .quote {
+  font-family: "Abril Text";
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  align-self: center;
+  padding: 0 20px;
+}
+.testemonials .testemonials-list .description-contact {
+  color: #053663;
+  font-family: Narkis;
+  font-size: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.testemonials .testemonials-list .description-contact .add-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.testemonials .testemonials-list .description-contact .name-contact {
+  font-weight: 700;
+}
+
+/***************************FOOTER****************************/
+.footer {
+  padding: 0 6.25%;
+  background-color: #001722;
+  color: #fff;
+  text-align: center;
+}
+.footer .footer-text {
+  padding: 35px 15px;
+  color: #ffffff;
+  font-family: Narkis;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.footer .footer-text a {
+  color: #fff;
+}
+
+.hot-line {
+  text-decoration: none;
+}
+
+.bottom-call {
+  background-color: #033766;
+  height: 107px;
+  color: #ffffff;
+  font-family: Narkis;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-call img {
+  margin-left: 16px;
+}
+
+@media (max-width: 376px) {
+  /******************************HEADER********************************/
+  .header .logos {
+    width: 375px;
+    height: 60px;
+  }
+  .header .welcome-text {
+    margin: 60px auto 0;
+    font-size: 24px;
+  }
+
+  .top-btn {
+    width: 15%;
+    position: absolute;
+    z-index: 9;
+  }
+  .top-btn img {
+    width: 100%;
+  }
+
+  /******************CONTACT********************/
+  .contact-form .wrap-form .success-msg {
+    font-size: 36px;
+  }
+  .contact-form .header-form {
+    background-size: 40%;
+    font-size: 22px;
+  }
+  .contact-form .header-form .header-text-form {
+    text-align: right;
+  }
+  .contact-form .header-form .bold-text {
+    font-size: 24px;
+  }
+  .contact-form .text-in-form {
+    font-size: 16px;
+  }
+  .contact-form .input-container {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 15px 6.25%;
+  }
+  .contact-form .input-container label {
+    font-size: 16px;
+  }
+  .contact-form .input-container input, .contact-form .input-container select {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .contact-form .input-container.checkbox {
+    font-size: 16px;
+  }
+  .contact-form .btn-send {
+    line-height: 50px;
+    font-size: 22px;
+  }
+
+  .container-check {
+    padding-right: 30px;
+  }
+
+  .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+
+  .testemonials h3 {
+    font-size: 24px;
+    padding: 45px 0 35px 0;
+  }
+  .testemonials .testemonials-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 40px 6.25%;
+  }
+  .testemonials .testemonials-list li .photo-contact {
+    width: 100%;
+  }
+  .testemonials .testemonials-list .quote {
+    font-size: 40px;
+    padding: 0 15px;
+  }
+  .testemonials .testemonials-list .description-contact {
+    font-size: 16px;
+  }
+
+  /***************************FOOTER****************************/
+  .bottom-call {
+    height: 80px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,30 @@
+.carousel-section{
+  .slide-item{
+    position: relative;
+  }
+  .description-slide{
+    position: absolute;
+    height: 42px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: $mainFont;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: #000;
+  }
+  .slide-name{
+    padding: 30px 0;
+    text-align: center;
+    color: #053663;
+    font-family: $mainFont;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

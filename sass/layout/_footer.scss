@@ -1,0 +1,36 @@
+/***************************FOOTER****************************/
+.footer{
+  @include wrap-padding;
+  background-color: #001722;
+  color: #fff;
+  text-align: center;
+  .footer-text{
+    padding: 35px 15px;
+    color: #ffffff;
+    font-family: $mainFont;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    a{
+      color: #fff;
+    }
+  }
+}
+.hot-line{
+  text-decoration: none;
+}
+.bottom-call{
+  background-color: #033766;
+  height: 107px;
+  color: #ffffff;
+  font-family: $mainFont;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    margin-left: 16px;
+  }
+}

@@ -1,0 +1,8 @@
+@mixin wrap-padding{
+  padding: 0 6.25%;
+}
+@mixin flex-row-end{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
